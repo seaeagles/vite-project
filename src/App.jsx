@@ -1,17 +1,8 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-
-
-function DragonCard(props) {
-  console.log(props)
-  return (
-    <div className={props.type + ' dragon-card'}>
-      <h1>{props.type}</h1>
-      <div>{props.icon} <span>{props.clicks}</span></div>
-    </div>
-  )
-}
+import { DragonCard } from './components/dragonCard'
+import { MyButton } from './components/button'
 
 
 function App() {
@@ -26,6 +17,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+      <MyButton />
       <DragonCard clicks={0} type={'fire'} icon={'🐉'}/>
       <DragonCard clicks={0} type={'water'} icon={'🐉'}/>
       <DragonCard clicks={0} type={'air'} icon={'🐉'}/>
